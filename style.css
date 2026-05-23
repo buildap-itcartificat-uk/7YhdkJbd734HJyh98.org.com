@@ -1,0 +1,56 @@
+/* fallback */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v335/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2) format('woff2');
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+/* প্রিন্ট করার জন্য স্পেশাল সেটিংস */
+@media print {
+    @page {
+        size: landscape; /* এটি পেজকে অটোমেটিক ল্যান্ডস্কেপ করবে */
+        margin: 0;      /* চারপাশের বাড়তি অংশ রিমুভ করবে */
+    }
+
+    body {
+        background-color: white !important;
+    }
+
+    /* টুলবার এবং সাইডবার প্রিন্টে আসবে না */
+    .toolbar, #sidebar {
+        display: none !important;
+    }
+
+    .content-area, .viewer {
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    .main-img {
+        width: 100% !important;   /* ইমেজটি পুরো পাতা জুড়ে থাকবে */
+        height: auto !important;
+        max-width: auto !important;
+        transform: none !important; /* জুম বা রোটেশন থাকলে তা প্রিন্টে রিসেট হবে */
+        box-shadow: none !important;
+        margin: 0 !important;
+    }
+}
